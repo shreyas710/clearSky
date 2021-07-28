@@ -33,7 +33,6 @@ const updateUI = (data) => {
 };
 
 cityForm.addEventListener("submit", (e) => {
-	// prevent default action
 	e.preventDefault();
 
 	// get city
