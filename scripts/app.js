@@ -8,9 +8,6 @@ const forecast = new Forecast();
 
 // update ui
 const updateUI = (data) => {
-	// const cityDet = data.cityDet;
-	// const weather = data.weather;
-
 	// destructuring
 	const { cityDet, weather } = data;
 
@@ -26,11 +23,6 @@ const updateUI = (data) => {
 
 	// update night and day and icons
 	let timeSrc = weather.IsDayTime ? "img/day.svg" : "img/night.svg";
-	// if(weather.IsDayTime){
-	//     timeSrc = 'img/day.svg';
-	// }else{
-	//     timeSrc = 'img/night.svg';
-	// }
 	time.setAttribute("src", timeSrc);
 
 	const iconSrc = `img/icons/${weather.WeatherIcon}.svg`;

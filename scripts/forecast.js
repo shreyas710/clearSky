@@ -9,7 +9,6 @@ class Forecast {
 	async updateCity(city) {
 		const cityDet = await this.getCity(city);
 		const weather = await this.getWeather(cityDet.Key);
-		// object shorthand notation only when property name and value name is same
 		return { cityDet, weather };
 	}
 
@@ -29,9 +28,3 @@ class Forecast {
 		return data[0];
 	}
 }
-
-// getCity('pune').then(data => {
-//     return getWeather(data.Key);
-// }).then(data => {
-//     console.log(data);
-// }).catch(err => console.log(err));
